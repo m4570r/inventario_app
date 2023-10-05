@@ -40,7 +40,8 @@ function obtenerNombreUsuario($conexion, $usuario_id) {
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-<div class="navbar">
+<?php require_once '../../templates/header.php'; ?>
+<div class="navbar navbar_admin">
     <span>Bienvenido, <?php echo obtenerNombreUsuario($conexion, $_SESSION['usuario_id']); ?></span>
     <span>Nivel: <?php echo $_SESSION['nivel_permisos']; ?></span>
     <a href="cerrar_sesion.php">Cerrar Sesión</a>
@@ -49,5 +50,6 @@ function obtenerNombreUsuario($conexion, $usuario_id) {
     <h1>Panel de Control del Administrador</h1>
     <p>Aquí puedes buscar usuarios y gestionar productos.</p>
     <!-- Agrega aquí la funcionalidad y el contenido específico para el empleado -->
+    <?php require_once '../../templates/footer.php'; ?>
 </body>
 </html>

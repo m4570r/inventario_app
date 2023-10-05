@@ -37,16 +37,24 @@ function obtenerNombreUsuario($conexion, $usuario_id) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Control del Empleado</title>
     <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <div class="navbar">
-        <span>Bienvenido, <?php echo obtenerNombreUsuario($conexion, $_SESSION['usuario_id']); ?></span>
-        <span>Nivel: <?php echo $_SESSION['nivel_permisos']; ?></span>
-        <a href="cerrar_sesion.php">Cerrar Sesión</a>
-    </div>
+<?php require_once '../../templates/header.php'; ?>
+
+<div class="navbar navbar_empleado">
+    <span>Bienvenido, <?php echo obtenerNombreUsuario($conexion, $_SESSION['usuario_id']); ?></span>
+    <span>Nivel: <?php echo $_SESSION['nivel_permisos']; ?></span>
+    <a href="cerrar_sesion.php">Cerrar Sesión</a>
+</div>
+
     <h1>Panel de Control del Empleado</h1>
     <p>Aquí puedes buscar usuarios y gestionar productos.</p>
     <!-- Agrega aquí la funcionalidad y el contenido específico para el empleado -->
+    <?php require_once '../../templates/footer.php'; ?>
+
 </body>
 </html>
+
+
 

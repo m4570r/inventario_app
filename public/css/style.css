@@ -26,25 +26,51 @@ header h1 {
 }
 
 /* Barra de navegación */
-nav {
-    background-color: #444;
+/* Estilos para la barra de bienvenida */
+.navbar {
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Alinear los elementos a los extremos */
+    align-items: center; /* Centrar verticalmente */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.navbar_admin{
+    background-color: #168300; /* Color de fondo, puedes cambiarlo según tu preferencia */
+    color: #fff; /* Color del texto */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.navbar_empleado{
+    background-color: #007bff; /* Color de fondo, puedes cambiarlo según tu preferencia */
+    color: #fff; /* Color del texto */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.navbar a {
+    color: #fff; /* Color del enlace en la barra de navegación */
+    text-decoration: none; /* Sin subrayado de enlaces */
+    margin-left: 20px; /* Espacio entre enlaces */
 }
+
+.navbar a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos para el botón de Cerrar Sesión */
+.navbar a.btn-cerrar-sesion {
+    background-color: #fff; /* Color de fondo del botón */
+    color: #007bff; /* Color del texto del botón */
+    border: 1px solid #007bff; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    margin-right: 20px; /* Espacio entre el botón y otros enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.navbar a.btn-cerrar-sesion:hover {
+    background-color: #007bff; /* Color de fondo al pasar el ratón */
+    color: #fff; /* Color del texto al pasar el ratón */
+    text-decoration: none; /* Sin subrayado al pasar el ratón */
+}
+
 
 /* Formularios */
 .form-group {
