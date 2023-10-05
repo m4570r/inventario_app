@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <div class="login-container">
+<div class="login-container">
         <h2>Iniciar Sesión</h2>
         <?php if (isset($mensaje_error)): ?>
             <p class="error-message"><?php echo $mensaje_error; ?></p>
         <?php endif; ?>
-        <form method="POST" action="index.php">
+        <form method="POST">
             <div class="form-group">
                 <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
                 <label for="contrasena">Contraseña:</label>

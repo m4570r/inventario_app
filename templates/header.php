@@ -8,10 +8,14 @@
     <!-- Otros enlaces a hojas de estilo o archivos JavaScript comunes -->
 </head>
 <body>
-    <header>
+<header>
+        <h1>Sistema de Control de Inventario</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
+                <li><a href="#">Otro enlace</a></li>
+                <li><a href="#">Otro enlace</a></li>
+                <li><a href="#">Otro enlace</a></li>
                 <!-- Agrega otros enlaces de navegación según sea necesario -->
             </ul>
         </nav>

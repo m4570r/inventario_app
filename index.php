@@ -19,11 +19,8 @@ if (isset($_SESSION['usuario_id'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $contrasena = $_POST['contrasena'];
-    echo $nombre;
-    echo "<br>";
-    echo $contrasena;
 
-    // Validar las credenciales (esto es un ejemplo básico, en una aplicación real se debe hacer de forma más segura)
+// Validar las credenciales (esto es un ejemplo básico, en una aplicación real se debe hacer de forma más segura)
 // Obtener el nombre de usuario y contraseña ingresados por el usuario
 
 // Consultar la base de datos para obtener el hash de la contraseña correspondiente al nombre de usuario
@@ -88,22 +85,19 @@ function obtenerNivelPermisos($conexion, $usuario_id) {
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <?php if (isset($mensaje_error)): ?>
-            <p class="error-message"><?php echo $mensaje_error; ?></p>
-        <?php endif; ?>
-        <form method="POST">
-            <div class="form-group">
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required>
-            </div>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-    </div>
+<?php
+    // Incluir el encabezado
+    include_once 'templates/header.php';
+    ?>
+
+    <?php
+    // Incluir la página de inicio de sesión
+    include_once 'views/usuarios/login.php';
+    ?>
+
+    <?php
+    // Incluir el pie de página
+    include_once 'templates/footer.php';
+    ?>
 </body>
 </html>
