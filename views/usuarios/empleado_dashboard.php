@@ -1,6 +1,14 @@
 <?php
 require_once '../../config/config.php';
 session_start(); // Iniciar la sesión
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['usuario_id']) || !isset($_SESSION['nivel_permisos'])) {
+    // Si no ha iniciado sesión, redirigir al inicio de sesión
+    header('Location: ../../index.php');
+    exit(); // Detener la ejecución del script
+}
+
 // Función para obtener el nombre de usuario y nivel de permisos a partir del ID de usuario
 function obtenerNombreUsuario($conexion, $usuario_id) {
     try {
@@ -28,7 +36,7 @@ function obtenerNombreUsuario($conexion, $usuario_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Control del Empleado</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
     <div class="navbar">
